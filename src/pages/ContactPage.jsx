@@ -9,12 +9,26 @@ import { IoIosText } from "react-icons/io";
 import emailjs from "@emailjs/browser";
 
 const ContactPage = () => {
-  const [formState, setFormState] = useState({});
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+    subject: "",
+  });
+
   const form = useRef();
 
   const handleChange = async (e) => {
     const { id, value } = e.target;
     setFormState((prevState) => ({ ...prevState, [id]: value }));
+  };
+
+  const isFormValid = () => {
+    return (
+      formState.name.trim() !== "" &&
+      formState.email.trim() !== "" &&
+      formState.message.trim() !== ""
+    );
   };
 
   const handleSubmit = (e) => {
@@ -37,7 +51,7 @@ const ContactPage = () => {
           console.log("FAILED...", error);
         }
       );
-    setFormState({});
+    setFormState({ name: "", email: "", message: "", subject: "" });
   };
 
   return (
@@ -59,7 +73,7 @@ const ContactPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className="rounded-lg  p-8 bg-gray-800/10 shadow-xl  sm:py-4 px-4 m-2 sm:m-0 sm:rounded-lg sm:px-10 ">
+        <div className="rounded-lg  p-8 bg-gray-800/5 shadow-xl  sm:py-4 px-4 m-2 sm:m-0 sm:rounded-lg sm:px-10 ">
           <form ref={form} onSubmit={handleSubmit} className="space-y-2">
             <div className={"flex flex-col justify-center items-start mx-1"}>
               <label
@@ -171,11 +185,11 @@ const ContactPage = () => {
 
             <button
               type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent
+              className={`w-full flex justify-center py-2 px-4 border border-transparent
 							rounded-md shadow-sm text-sm font-medium dark:text-white text-black/70 focus:outline-none focus:ring-2 focus:ring-offset-2
-							   transition duration-150 ease-in-out disabled:opacity-50"
-              style={{ backgroundColor: "sienna" }}
-              // disabled={!isUsernameAvailable}
+							   transition duration-150 ease-in-out disabled:opacity-50 `}
+              style={{ backgroundColor: "steelblue" }}
+              disabled={!isFormValid()}
             >
               {/*{loading ? (*/}
               {/*    <>*/}

@@ -70,14 +70,14 @@ const Navbar = () => {
                   <BsInstagram className={"h-5 w-full bg-white"}></BsInstagram>
                 </Link>
               </li>
-              <li className="m-1">
+              {/* <li className="m-1">
                 <Link
                   target="_blank"
                   to={"https://www.youtube.com/@travisvela/shorts"}
                 >
                   <BsYoutube className={"h-5 w-full bg-white"}></BsYoutube>
                 </Link>
-              </li>
+              </li> */}
               <li className="m-1">
                 <Link
                   target="_blank"
