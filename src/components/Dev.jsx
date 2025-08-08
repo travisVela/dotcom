@@ -6,7 +6,7 @@ import { IoUnlink } from "react-icons/io5";
 const Dev = () => {
   return (
     <div className="flex flex-col h-full justify-start">
-      <div className="flex flex-row h-1/4 w-full justify-center items-start">
+      <div className="flex flex-row h-auto md:h-1/4 w-full justify-center items-start">
         <h1 className="text-2xl  mt-4 md:text-6xl  md:mt-12">
           some development stuff
         </h1>
@@ -18,7 +18,7 @@ const Dev = () => {
           className="block max-w-sm p-6 m-2 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100"
         >
           <IoUnlink className="size-10" />
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
             gearapp
           </h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">

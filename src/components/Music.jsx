@@ -8,7 +8,7 @@ import { FaSpotify } from "react-icons/fa";
 const Music = () => {
   return (
     <div className="flex flex-col h-full justify-start  ">
-      <div className="flex flex-row h-1/4 w-full justify-center items-start">
+      <div className="flex flex-row h-auto md:h-1/4 w-full justify-center items-start">
         <h1 className="text-2xl  mt-4 md:text-6xl  md:mt-12">
           some music stuff
         </h1>

@@ -63,7 +63,7 @@ const ContactPage = () => {
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-center text-xl font-bold leading-none text-gray-900 dark:text-white">
-          Update Profile
+          contact me
         </h2>
       </motion.div>
 
