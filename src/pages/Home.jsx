@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Music from "../components/Music";
 import Dev from "../components/Dev";
 const Home = () => {
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled, setIsToggled] = useState(null);
 
   const handleToggle = () => {
     setIsToggled(!isToggled);
@@ -11,16 +11,20 @@ const Home = () => {
 
   return (
     <div className={"container justify-items-center items-center h-screen"}>
-      <label className="inline-flex items-center cursor-pointer">
-        <input
-          onChange={handleToggle}
-          type="checkbox"
-          value=""
-          className="sr-only peer"
-        />
-        <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#4682b4] dark:peer-checked:bg-[#4682b4]"></div>
-        <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"></span>
-      </label>
+      <div className="flex flex-row justify-center items-center">
+        <h3 className="m-2">dev</h3>
+        <label className="inline-flex items-center cursor-pointer">
+          <input
+            onChange={handleToggle}
+            type="checkbox"
+            value=""
+            className="sr-only peer"
+          />
+          <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#4682b4] dark:peer-checked:bg-[#4682b4] mx-auto"></div>
+          <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"></span>
+        </label>
+        <h3 className="mx-auto">music</h3>
+      </div>
 
       {isToggled ? (
         <div

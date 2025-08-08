@@ -11,14 +11,32 @@ const Dev = () => {
           some development stuff
         </h1>
       </div>
-
-      <div className={"flex flex-row w-full justify-around items-center"}>
-        <Link to={"https://gearapp.travisvela.com"} target="_blank">
-          <IoUnlink className="size-20" />
-          <span>app built for archiving instrument info</span>
+      <div className="flex flex-row w-full justify-around">
+        <Link
+          to={"https://gearapp.travisvela.com"}
+          target="_blank"
+          className="block max-w-sm p-6 m-2 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100"
+        >
+          <IoUnlink className="size-10" />
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
+            gearapp
+          </h5>
+          <p className="font-normal text-gray-700 dark:text-gray-400">
+            app built for archiving instrument info
+          </p>
         </Link>
-        <Link to={"https://www.linkedin.com/in/travisvela/"} target="_blank">
-          <FaLinkedin className={"size-20"}></FaLinkedin>
+        <Link
+          to={"https://www.linkedin.com/in/travisvela/"}
+          target="_blank"
+          className="block max-w-sm p-6 m-2 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100"
+        >
+          <FaLinkedin className={"size-10"}></FaLinkedin>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
+            linked in
+          </h5>
+          <p className="font-normal text-gray-700 dark:text-gray-400">
+            resume and certs and stuff
+          </p>
         </Link>
       </div>
     </div>
