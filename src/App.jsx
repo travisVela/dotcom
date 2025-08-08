@@ -4,6 +4,7 @@ import "./App.css";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path={"/"} element={<Home />} />
+        <Route path={"/contact"} element={<ContactPage />} />
       </Routes>
     </div>
   );
