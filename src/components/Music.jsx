@@ -8,11 +8,13 @@ import { FaSpotify } from "react-icons/fa";
 const Music = () => {
   return (
     <div className="flex flex-col h-full justify-start  ">
-      <div className="flex flex-row h-1/4 w-full justify-self-center items-start">
-        <h1 className="text-3xl md:text-6xl mt-4 md:mt-12">some music stuff</h1>
+      <div className="flex flex-row h-1/4 w-full justify-center items-start">
+        <h1 className="text-2xl  mt-4 md:text-6xl  md:mt-12">
+          some music stuff
+        </h1>
       </div>
 
-      <div className="flex flex-row w-full justify-around">
+      <div className="flex flex-col md:flex-row w-full justify-around">
         <Link
           to={"https://soundcloud.com/travisvela"}
           target="_blank"
@@ -40,7 +42,7 @@ const Music = () => {
           </p>
         </Link>
       </div>
-      <div className="flex flex-row w-full justify-around">
+      <div className="flex flex-col md:flex-row w-full justify-around">
         <Link
           to={"https://open.spotify.com/artist/0qfC2n7Tlxdvhq81PVOBhm"}
           target="_blank"

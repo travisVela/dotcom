@@ -6,12 +6,12 @@ import { IoUnlink } from "react-icons/io5";
 const Dev = () => {
   return (
     <div className="flex flex-col h-full justify-start">
-      <div className="flex flex-row h-1/4 justify-self-center items-start">
-        <h1 className="text-3xl mt-4 md:mt-12 md:text-6xl">
+      <div className="flex flex-row h-1/4 w-full justify-center items-start">
+        <h1 className="text-2xl  mt-4 md:text-6xl  md:mt-12">
           some development stuff
         </h1>
       </div>
-      <div className="flex flex-row w-full justify-around">
+      <div className="flex flex-col md:flex-row w-full justify-around">
         <Link
           to={"https://gearapp.travisvela.com"}
           target="_blank"
