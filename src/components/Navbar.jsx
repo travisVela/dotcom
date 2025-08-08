@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     let handler = (e) => {
-      if (e.target !== buttonRef.current) {
+      if (!mobileMenuRef.current.contains(e.target)) {
         setMobileMenuOpen(false);
       }
     };
